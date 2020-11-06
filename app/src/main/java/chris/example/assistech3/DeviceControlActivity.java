@@ -169,8 +169,8 @@ public class DeviceControlActivity extends AppCompatActivity {
     }
 
     private void displayGattServices(List<BluetoothGattService> gattServices) {
-        /*UUID UUID_ESP_RX = UUID.fromString(SampleGattAttributes.ESP_RX);
-        UUID UUID_ESP_TX = UUID.fromString(SampleGattAttributes.ESP_TX);*/
+        UUID UUID_ESP_RX = UUID.fromString(SampleGattAttributes.ESP_RX);
+        UUID UUID_ESP_TX = UUID.fromString(SampleGattAttributes.ESP_TX);
         if (gattServices == null)
             return;
         String uuid = null;
@@ -197,10 +197,10 @@ public class DeviceControlActivity extends AppCompatActivity {
                 currentCharaData.put(LIST_NAME, SampleGattAttributes.lookup(uuid, unknownCharaString));
                 currentCharaData.put(LIST_UUID, uuid);
                 gattCharacteristicGroupData.add(currentCharaData);
-                /*if (uuid.equals(SampleGattAttributes.ESP_RX))
+                if (uuid.equals(SampleGattAttributes.ESP_RX))
                     bluetoothGattCharacteristicESP_RX = gattService.getCharacteristic(UUID_ESP_RX);
                 if (uuid.equals(SampleGattAttributes.ESP_TX))
-                    bluetoothGattCharacteristicESP_TX = gattService.getCharacteristic(UUID_ESP_TX);*/
+                    bluetoothGattCharacteristicESP_TX = gattService.getCharacteristic(UUID_ESP_TX);
                 // globale Variable BluetoothGattCharacteristic
             }
             mGattCharacteristics.add(charas);

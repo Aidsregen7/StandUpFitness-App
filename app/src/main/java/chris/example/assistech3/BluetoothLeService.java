@@ -31,7 +31,9 @@ public class BluetoothLeService extends Service {
     public final static String ACTION_DATA_AVAILABLE = "com.example.bluetooth.le.ACTION_DATA_AVAILABLE";
     public final static String EXTRA_DATA = "com.example.bluetooth.le.EXTRA_DATA";
 
-    public static final UUID UUID_HM10 = UUID.fromString(SampleGattAttributes.HM_10);
+    public static final UUID UUID_ESP_RX = UUID.fromString(SampleGattAttributes.ESP_RX);
+    public static final UUID UUID_ESP_TX = UUID.fromString(SampleGattAttributes.ESP_TX);
+    //public static final UUID UUID_HM10 = UUID.fromString(SampleGattAttributes.HM_10);
     public static final UUID UUID_0x2902 = UUID.fromString("00002902-0000-1000-8000-00805f9b34fb");
 
     private final IBinder mBinder = new LocalBinder();
@@ -180,13 +182,23 @@ public class BluetoothLeService extends Service {
 
         mBluetoothGatt.setCharacteristicNotification(characteristic, true);
 
-        if (UUID_HM10.equals(characteristic.getUuid())) {
+        /*if (UUID_HM10.equals(characteristic.getUuid())) {
             BluetoothGattDescriptor descriptor = characteristic.getDescriptor(UUID.fromString(SampleGattAttributes.CLIENT_CHARACTERISTIC_CONFIG));
             descriptor.setValue(BluetoothGattDescriptor.ENABLE_INDICATION_VALUE);
             mBluetoothGatt.writeDescriptor(descriptor);
-        }
+        }*/
         if (UUID_0x2902.equals(characteristic.getUuid())) {
             BluetoothGattDescriptor descriptor = characteristic.getDescriptor(UUID_0x2902);
+            descriptor.setValue(BluetoothGattDescriptor.ENABLE_INDICATION_VALUE);
+            mBluetoothGatt.writeDescriptor(descriptor);
+        }
+        if (UUID_ESP_RX.equals(characteristic.getUuid())) {
+            BluetoothGattDescriptor descriptor = characteristic.getDescriptor(UUID_ESP_RX);
+            descriptor.setValue(BluetoothGattDescriptor.ENABLE_INDICATION_VALUE);
+            mBluetoothGatt.writeDescriptor(descriptor);
+        }
+        if (UUID_ESP_TX.equals(characteristic.getUuid())) {
+            BluetoothGattDescriptor descriptor = characteristic.getDescriptor(UUID_ESP_TX);
             descriptor.setValue(BluetoothGattDescriptor.ENABLE_INDICATION_VALUE);
             mBluetoothGatt.writeDescriptor(descriptor);
         }

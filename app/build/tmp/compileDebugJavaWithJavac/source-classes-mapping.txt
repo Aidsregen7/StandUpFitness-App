@@ -1,17 +1,5 @@
 chris/example/assistech3/BuildConfig.java
  chris.example.assistech3.BuildConfig
-chris/example/assistech3/BluetoothLeService.java
- chris.example.assistech3.BluetoothLeService
- chris.example.assistech3.BluetoothLeService$1
- chris.example.assistech3.BluetoothLeService$LocalBinder
-chris/example/assistech3/SampleGattAttributes.java
- chris.example.assistech3.SampleGattAttributes
-chris/example/assistech3/DeviceControlActivity.java
- chris.example.assistech3.DeviceControlActivity
- chris.example.assistech3.DeviceControlActivity$1
- chris.example.assistech3.DeviceControlActivity$2
- chris.example.assistech3.DeviceControlActivity$3
- chris.example.assistech3.DeviceControlActivity$4
 chris/example/assistech3/MainActivity.java
  chris.example.assistech3.MainActivity
  chris.example.assistech3.MainActivity$1
@@ -19,3 +7,15 @@ chris/example/assistech3/MainActivity.java
  chris.example.assistech3.MainActivity$2$1
  chris.example.assistech3.MainActivity$3
  chris.example.assistech3.MainActivity$3$1
+chris/example/assistech3/DeviceControlActivity.java
+ chris.example.assistech3.DeviceControlActivity
+ chris.example.assistech3.DeviceControlActivity$1
+ chris.example.assistech3.DeviceControlActivity$2
+ chris.example.assistech3.DeviceControlActivity$3
+ chris.example.assistech3.DeviceControlActivity$4
+chris/example/assistech3/BluetoothLeService.java
+ chris.example.assistech3.BluetoothLeService
+ chris.example.assistech3.BluetoothLeService$1
+ chris.example.assistech3.BluetoothLeService$LocalBinder
+chris/example/assistech3/SampleGattAttributes.java
+ chris.example.assistech3.SampleGattAttributes

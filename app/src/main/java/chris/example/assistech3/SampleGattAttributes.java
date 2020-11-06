@@ -9,7 +9,7 @@ public class SampleGattAttributes {
     public static String CLIENT_CHARACTERISTIC_CONFIG = "00002902-0000-1000-8000-00805f9b34fb";
     public static String HM_10 = "0000ffe1-0000-1000-8000-00805f9b34fb";
     public static String BLOOD_PRESSURE_MEASUREMENT = "00002a35-0000-1000-8000-00805f9b34fb";
-    public static String ESP_TX = "6e400003-b5a3-f393-e0A9-e50e24dcca9e ";
+    public static String ESP_TX = "6e400003-b5a3-f393-e0A9-e50e24dcca9e";
     public static String ESP_RX = "6e400002-b5a3-f393-e0A9-e50e24dcca9e";
 
     static
